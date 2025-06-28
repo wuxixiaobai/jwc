@@ -1,0 +1,591 @@
+<html lang="zh-CN"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>无锡湖滨中学招生志愿填报指导</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* 全局样式重置 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #1a2a6c, #b21f1f, #1a2a6c);
+            color: #333;
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            padding: 30px 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            margin-bottom: 30px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, #ff8a00, #e52e71, #1a2a6c);
+        }
+
+        h1 {
+            color: #1a2a6c;
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .subtitle {
+            color: #e52e71;
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+
+        .school-logo {
+            width: 120px;
+            height: 120px;
+            background: linear-gradient(45deg, #1a2a6c, #e52e71);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            color: white;
+            font-size: 3rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .page {
+            display: none;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            margin-bottom: 30px;
+            animation: fadeIn 0.5s ease;
+        }
+
+        #main-page {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .section-title {
+            color: #1a2a6c;
+            border-left: 5px solid #e52e71;
+            padding-left: 15px;
+            margin: 25px 0;
+            font-size: 1.8rem;
+        }
+
+        .btn-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .btn {
+            background: linear-gradient(135deg, #1a2a6c, #3a5fc5);
+            color: white;
+            border: none;
+            padding: 25px 20px;
+            border-radius: 12px;
+            font-size: 1.3rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            background: linear-gradient(135deg, #e52e71, #ff8a00);
+        }
+
+        .btn i {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .back-btn {
+            background: linear-gradient(135deg, #6c757d, #adb5bd);
+            padding: 12px 25px;
+            font-size: 1.1rem;
+            margin-bottom: 25px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .back-btn:hover {
+            background: linear-gradient(135deg, #5a6268, #868e96);
+        }
+
+        .content-box {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            border-left: 4px solid #1a2a6c;
+        }
+
+        .content-box h3 {
+            color: #e52e71;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .content-box h3 i {
+            color: #1a2a6c;
+        }
+
+        .info-item {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px dashed #e0e0e0;
+        }
+
+        .info-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .info-title {
+            font-weight: 700;
+            color: #1a2a6c;
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .highlight {
+            background: linear-gradient(120deg, rgba(255, 235, 59, 0.3), rgba(255, 235, 59, 0.7));
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        .code-badge {
+            background: #e52e71;
+            color: white;
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.9rem;
+            display: inline-block;
+            margin: 0 5px;
+        }
+
+        .requirements {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .requirement-card {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            border: 1px solid #e0e0e0;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .requirement-card h4 {
+            color: #1a2a6c;
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        th,
+        td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        th {
+            background: #1a2a6c;
+            color: white;
+            font-weight: 600;
+        }
+
+        tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+
+        tr:hover {
+            background: #e9ecef;
+        }
+
+        .important-note {
+            background: #fff8e1;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            border-radius: 0 8px 8px 0;
+            margin: 20px 0;
+            display: flex;
+            gap: 15px;
+        }
+
+        .important-note i {
+            color: #ff9800;
+            font-size: 1.5rem;
+            min-width: 30px;
+        }
+
+        footer {
+            text-align: center;
+            color: white;
+            padding: 20px;
+            margin-top: 30px;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        @media (max-width: 768px) {
+            .btn-container {
+                grid-template-columns: 1fr;
+            }
+
+            h1 {
+                font-size: 2.2rem;
+            }
+
+            .section-title {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- 页面头部 -->
+        <header>
+            <div class="school-logo">
+                <i class="fas fa-graduation-cap"></i>
+            </div>
+            <h1>无锡湖滨中学招生志愿填报指导</h1>
+            <div class="subtitle">以美载德· 以美启智 · 以美健体</div>
+        </header>
+
+        <!-- 主页面 -->
+        <div id="main-page" class="page">
+            <h2 class="section-title">志愿意向</h2>
+            <p style="text-align: center; margin-bottom: 25px; font-size: 1.1rem;">
+                请结合同学的中考成绩、志愿意向选择相应的志愿类型，获取详细的填报指导
+            </p>
+
+            <div class="btn-container">
+                <button class="btn" onclick="showPage('yizhong-art')">
+                    <i class="fas fa-palette"></i>
+                    一中美术班
+                </button>
+
+                <button class="btn" onclick="showPage('huben-art')">
+                    <i class="fas fa-paint-brush"></i>
+                    湖滨本部美术班
+                </button>
+
+                <button class="btn" onclick="showPage('baodi-art')">
+                    <i class="fas fa-arrow-up"></i>
+                    湖滨保底冲一中美术班
+                </button>
+
+                <button class="btn" onclick="showPage('ordinary-class')">
+                    <i class="fas fa-book-open"></i>
+                    普通班
+                </button>
+            </div>
+        </div>
+
+        <!-- 一中班美术班页面 -->
+        <div id="yizhong-art" class="page">
+            <button class="btn back-btn" onclick="showPage('main-page')">
+                <i class="fas fa-arrow-left"></i> 返回主页面
+            </button>
+
+            <h2 class="section-title">一中班美术班志愿填报指导</h2>
+
+            <div class="content-box">
+                <h3><i class="fas fa-info-circle"></i> 班级介绍</h3>
+                <div class="info-item">
+                    <p>自2007年起，我校与无锡一中联合创办美术特色班。学生在一中本部校区学习，文化课程由一中教师团队执教，专业美术课程由我校专业师资负责。</p>
+                    <p style="margin-top: 15px;">一中美术班共两个班：</p>
+                    <ul style="list-style-type: none; margin: 15px 0; padding-left: 20px;">
+                        <li><i class="fas fa-check-circle" style="color: #1a2a6c;"></i> 一中学籍班（代码 <span class="code-badge">5021</span>）</li>
+                        <li><i class="fas fa-check-circle" style="color: #1a2a6c;"></i> 湖滨学籍班（代码 <span class="code-badge">5009</span>）</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="content-box">
+                <h3><i class="fas fa-clipboard-check"></i> 录取条件</h3>
+                <div class="requirements">
+                    <div class="requirement-card">
+                        <h4><i class="fas fa-star"></i> 必备条件</h4>
+                        <p>必须参加我校组织的专业考试并获得<span class="highlight">合格等级</span>。</p>
+                    </div>
+
+                    <div class="requirement-card">
+                        <h4><i class="fas fa-chart-line"></i> 中考成绩要求</h4>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>班级类型</th>
+                                    <th>2024年分数线</th>
+                                    <th>2023年分数线</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>一中学籍班</td>
+                                    <td>658分</td>
+                                    <td>651分</td>
+                                </tr>
+                                <tr>
+                                    <td>湖滨学籍班</td>
+                                    <td colspan="2">动态划线（“5009”招收的中考成绩前25名）</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p style="margin-top: 10px; font-size: 0.9rem; color: #666;">*&nbsp;第一批次三阶段湖滨（5009）招收的学生在获得美术合格证的录取考生中，中考成绩前25名自动编入一中美术班（湖滨籍）</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-box">
+                <h3><i class="fas fa-edit"></i> 志愿填报建议</h3>
+                <div class="info-item">
+                    <div class="info-title"><i class="fas fa-list-ol"></i> 填报位置</div>
+                    <ul style="list-style-type: none; padding-left: 20px;">
+                        <li><i class="fas fa-angle-right" style="color: #1a2a6c;"></i> 第一阶段第一批次：一中美术班（一中籍）<span class="code-badge">代码 5021</span></li>
+                        <li><i class="fas fa-angle-right" style="color: #1a2a6c;"></i> 第一阶段第三批次A志愿：一中美术班（湖滨籍）<span class="code-badge">代码 5009</span></li>
+                    </ul>
+                </div>
+
+                <div class="important-note">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <div>
+                        <strong>特别提醒：</strong> 如果要在第一批次第三阶段录取进入一中美术班（湖滨籍），第一批次第二阶段要空出来不能填。
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 湖滨本部美术班页面 -->
+        <div id="huben-art" class="page">
+            <button class="btn back-btn" onclick="showPage('main-page')">
+                <i class="fas fa-arrow-left"></i> 返回主页面
+            </button>
+
+            <h2 class="section-title">湖滨本部美术班志愿填报指导</h2>
+
+            <div class="content-box">
+                <h3><i class="fas fa-clipboard-check"></i> 录取条件</h3>
+                <div class="info-item">
+                    <p>取得湖滨中学组织的美术加试<span class="highlight">合格证</span>、中考成绩<span class="highlight">过线</span>。</p>
+                </div>
+
+                <div class="info-item">
+                    <div class="info-title"><i class="fas fa-chart-bar"></i> 分数线预估</div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>年份</th>
+                                <th>湖滨分数线</th>
+                                <th>当年普高线</th>
+                                <th>分差</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>2024年</td>
+                                <td>572分</td>
+                                <td>582分</td>
+                                <td>-10分</td>
+                            </tr>
+                            <tr>
+                                <td>2023年</td>
+                                <td>575分</td>
+                                <td>585分</td>
+                                <td>-10分</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="content-box">
+                <h3><i class="fas fa-edit"></i> 志愿填报建议</h3>
+                <div class="info-item">
+                    <div class="info-title"><i class="fas fa-list-ol"></i> 填报位置</div>
+                    <ul style="list-style-type: none; padding-left: 20px;">
+                        <li><i class="fas fa-angle-right" style="color: #1a2a6c;"></i> 第一阶段第一批次：一中美术班（一中籍）<span class="code-badge">代码 5021</span></li>
+                        <li><i class="fas fa-angle-right" style="color: #1a2a6c;"></i> 第一阶段第三批次A志愿：一中美术班<span class="code-badge">代码 5009</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- 保底冲一中美术班页面 -->
+        <div id="baodi-art" class="page">
+            <button class="btn back-btn" onclick="showPage('main-page')">
+                <i class="fas fa-arrow-left"></i> 返回主页面
+            </button>
+
+            <h2 class="section-title">湖滨本部保底冲一中美术班</h2>
+
+            <div class="content-box">
+                <h3><i class="fas fa-edit"></i> 志愿填报建议</h3>
+                <div class="info-item">
+                    <div class="info-title"><i class="fas fa-list-ol"></i> 填报位置</div>
+                    <ul style="list-style-type: none; padding-left: 20px;">
+                        <li><i class="fas fa-angle-right" style="color: #1a2a6c;"></i> 第一阶段第一批次：一中美术班（一中籍）<span class="code-badge">代码 5021</span></li>
+                        <li><i class="fas fa-angle-right" style="color: #1a2a6c;"></i> 第一阶段第三批次A志愿：一中美术班<span class="code-badge">代码 5009</span></li>
+                    </ul>
+                </div>
+
+                <div class="important-note">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <div>
+                        <strong>特别提醒：</strong> 湖滨（5009）招收的学生在获得美术合格证的录取考生中，中考成绩前25名自动编入一中美术班（湖滨籍）。如果要在第一批次第三阶段被录取，第二阶段要空出来不能填。
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 普通班页面 -->
+        <div id="ordinary-class" class="page">
+            <button class="btn back-btn" onclick="showPage('main-page')">
+                <i class="fas fa-arrow-left"></i> 返回主页面
+            </button>
+
+            <h2 class="section-title">普通班志愿填报指导</h2>
+
+            <div class="content-box">
+                <h3><i class="fas fa-clipboard-check"></i> 录取条件</h3>
+                <div class="info-item">
+                    <p>不需要取得专业加试合格证、中考成绩过线。</p>
+                    <p>志愿填报：第一批次第三阶段A志愿，代码5019</p>
+                </div>
+
+                <div class="info-item">
+                    <div class="info-title"><i class="fas fa-chart-bar"></i> 分数线预估</div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>年份</th>
+                                <th>录取分数线</th>
+                                <th>当年普高线</th>
+                                <th>分差</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>2024年</td>
+                                <td>586.5分</td>
+                                <td>582分</td>
+                                <td>+4.5分</td>
+                            </tr>
+                            <tr>
+                                <td>2023年</td>
+                                <td colspan="3">未招收普通类学生</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- 页脚 -->
+        <footer>
+            <p>© 2025 无锡湖滨中学 | 招生咨询电话: 0510-82810080</p>
+            <p>学校地址: 无锡市梁溪区建业路17号 (梁溪大桥东堍)</p>
+        </footer>
+    </div>
+
+    <script>
+        // 页面切换功能
+        function showPage(pageId) {
+            // 隐藏所有页面
+            document.querySelectorAll('.page').forEach(page => {
+                page.style.display = 'none';
+            });
+
+            // 显示请求的页面
+            document.getElementById(pageId).style.display = 'block';
+
+            // 滚动到顶部
+            window.scrollTo(0, 0);
+        }
+
+        // 添加简单的加载动画
+        window.addEventListener('DOMContentLoaded', () => {
+            setTimeout(() => {
+                document.body.style.opacity = 1;
+            }, 100);
+        });
+    </script>
+
+    </body></html>
